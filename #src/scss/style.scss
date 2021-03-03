@@ -1,18 +1,23 @@
-body{
-	font-size:20px;
-	display:flex;
-	justify-content:center;
-}
-h1{
-	font-size:40px;
-	@media (max-width:767px){
-		font-size:15px;
-	}
-}
-p{
-	font-size:13px;
-	
-	@media (max-width:767px){
-		font-size:40px;
-	}
-}
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import 'vendors/include-media';
+
+@import 'base/variables';
+@import 'base/reset';

@@ -1,27 +1,55 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  max-height: 1000000px;
+}
+
 body {
-  font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  color: #333;
+  background: #fff;
+  font: 16px/1.2 "Times New Roman", "Times", "Baskerville", "Georgia", serif;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 40px;
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
 }
 
-p {
-  font-size: 13px;
+.gm-style img {
+  max-width: none;
 }
 
-@media (max-width: 767px) {
-  h1 {
-    font-size: 15px;
-  }
+button,
+input {
+  border: none;
+  background: none;
+  outline: 0;
+}
 
-  p {
-    font-size: 40px;
-  }
+textarea {
+  outline: 0;
+}
+
+ul {
+  font-size: 0;
+}
+
+li {
+  list-style-type: none;
 }
