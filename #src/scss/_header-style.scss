@@ -1,0 +1,92 @@
+.header {
+      background-color: $brand;
+      .content {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px 0;
+      }
+}
+
+.logo {
+   display: inline-block;
+}
+
+.call-box {
+   .phone {
+      color: $light;
+      text-decoration: none;
+   }
+}
+
+.nav {
+   padding: 0 20px;
+   position: relative;
+   z-index: 2;
+   @include media ('<=768px') {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(170, 196, 187);
+      transition:all 0.5s ease-in-out;
+
+      &.active{
+			left:0;
+		}
+   }
+}
+
+.list {
+   display: flex;
+   font-size: 18px;
+   @include media ('<=768px') {
+      display: block;
+   }
+   .item {
+      margin: 0 15px;
+      .link {
+         font-family: $Roboto;
+         font-weight: 400;
+         color: $light;
+         text-decoration: none;
+         text-transform: uppercase;
+
+         position: relative;
+         
+         @include media ('>=1024px') {
+            &::after {
+               content: '';
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               width: 100%;
+               height: 1px;
+               background-color: currentColor; 
+            
+               transform-origin: left center;
+               transform: scaleX(0);
+               transition: all 0.2s ease-in;
+            }
+            &:hover {
+               &::after {
+                  transform: scaleX(1);
+               }
+            }
+         }
+      }
+   }
+}
+
+.burger {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background-color: $light;
+
+   display: none;
+   @include media ('<=768px') {
+      display: block;
+   }
+}

@@ -99,6 +99,12 @@ let { src, dest } = require('gulp'),
 		.pipe(dest(path.build.img))
   }
 
+  //added for fonts
+  function fonts() {		
+	return src(path.src.fonts)
+	.pipe(dest(path.build.fonts))
+}
+
 	// create new function for live tracking our updated files (html, css ...)
 	function watchfiles(params) {
 		gulp.watch([path.watch.html], html); //tracking folder with our html updated files
@@ -113,7 +119,7 @@ let { src, dest } = require('gulp'),
 	}
 	
 	
-	let build = gulp.series(clean, gulp.parallel(css, html, images)); //variable for function html(), and then we must add this variable into the  variable "watch" - there will be our series of executed functions + css and html are executed in parellel way
+	let build = gulp.series(clean, gulp.parallel(css, html, images, fonts)); //variable for function html(), and then we must add this variable into the  variable "watch" - there will be our series of executed functions + css and html are executed in parellel way
 	
 	let watch = gulp.parallel(build, watchfiles, browserSync);
 	

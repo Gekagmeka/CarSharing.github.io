@@ -16,21 +16,21 @@ $media-expressions: (
 	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 );
 
-@import 'header-style';
 
 @import 'vendors/include-media';
 
+@import 'base/fonts';
 @import 'base/variables';
 @import 'base/reset';
-@import 'base/fonts';
 
+@import 'header-style';
 
 
 
 // main styles
 
 .container {
-	max-width: 1200px;
+	max-width: 1230px;
 	margin: 0 auto;
 	padding: 0 15px;
 }

@@ -33,6 +33,13 @@ body {
 	// -moz-osx-font-smoothing: grayscale;
 }
 
+ul{
+	font-size:0;
+}
+
+li{
+	list-style-type:none;
+}
 
 // button,
 // input{
@@ -43,12 +50,4 @@ body {
 
 // textarea {
 // 	outline: 0;
-// }
-
-// ul{
-// 	font-size:0;
-// }
-
-// li{
-// 	list-style-type:none;
 // }
