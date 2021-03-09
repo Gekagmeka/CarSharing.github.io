@@ -28,13 +28,16 @@
    z-index: 2;
    @include media ('<=768px') {
       position: fixed;
-      top: 80px;
+      top: 0;
       left: -100%;
       width: 100%;
       height: 100%;
       padding: 0;
       background-color: rgb(170, 196, 187);
       transition:all 0.5s ease-in-out;
+
+      //for vertical scroll into the mobile menu
+      overflow: auto;
 
       &.active{
 			left: 0;
