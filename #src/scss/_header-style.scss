@@ -1,21 +1,42 @@
 .header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 50;
+
+   &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10; //dark upper menu with content
       background-color: $brand;
-      .content {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         padding: 20px 0;
-         @include media ('<=768px') {
-            padding: 10px 0;
-         }
+   }
+   .content {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      
+      @include media ('<=768px') {
+         height: 60px;
       }
+   }
 }
 
 .logo {
    display: inline-block;
+   position: relative;
+   z-index: 11; //must be greater than .header::before
 }
 
 .call-box {
+   position: relative;
+   z-index: 11; //must be greater than .header::before
    .phone {
       color: $light;
       text-decoration: none;
@@ -25,9 +46,11 @@
 .nav {
    padding: 0 20px;
    position: relative;
-   z-index: 2;
+   z-index: 11; //on desktop must be greater than .header::before, but on mobile must be less
+
    @include media ('<=768px') {
       position: fixed;
+      z-index: 9; //on mobile must be less to be under the header::before
       top: 0;
       left: -100%;
       width: 100%;
@@ -50,7 +73,7 @@
    font-size: 18px;
    @include media ('<=768px') {
       display: block;
-      padding-top: 60px;
+      padding-top: 100px;
    }
    .item {
       margin: 0 15px;
@@ -112,6 +135,6 @@
    @include media ('<=768px') {
       display: block;
       position: relative;
-      z-index: 5;
+      z-index: 11; // must be greater than .header::before
    }
 }
