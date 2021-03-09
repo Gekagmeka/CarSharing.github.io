@@ -24,8 +24,15 @@ $media-expressions: (
 @import 'base/reset';
 
 @import 'header-style';
+@import 'footer-style';
 
 
+
+body {
+	&.locked {
+		overflow: hidden;
+	}
+}
 
 // main styles
 
@@ -33,4 +40,8 @@ $media-expressions: (
 	max-width: 1230px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+.main {
+	height: 1000px;
 }
