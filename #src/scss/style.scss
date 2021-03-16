@@ -30,6 +30,7 @@ $media-expressions: (
 
 
 body {
+	color: #1B1818;
 	&.locked {
 		overflow: hidden;
 	}
@@ -44,5 +45,5 @@ body {
 }
 
 .main {
-	height: 1000px;
+	margin-top: 100px;
 }
