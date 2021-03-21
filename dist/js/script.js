@@ -7,3 +7,5 @@ burger_menu.onclick = function() {
    navigation.classList.toggle('active');
    body_main.classList.toggle('locked');
 }
+
+new Swiper('.swiper');

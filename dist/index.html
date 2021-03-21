@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<!-- <link rel="stylesheet" href="css/swiper.css"> -->
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<title>CarSharing</title>
 </head>
@@ -84,18 +86,40 @@
                <p class="text">
                   Change exclusive car via mobile appat the any point of the city
                </p>
-               <button class="btn" type="button">
+               <a class="btn" href="#">
                   Download App
-               </button>
+               </a>
             </div>
             <!-- right side -->
-            <div class="photo">
-               <div class="card">
-                  <img src="img/img-01.png" alt="car">
+            <div class="carousel">
+               <div class="swiper swiper-container">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <div class="card">
+                           <img src="img/img-01.png" alt="car">
+                        </div>
+                        <p class="price">
+                           <span>100 $ / day</span> <span>5 seats</span> <span>50 km mileage</span>
+                        </p>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="card">
+                           <img src="img/img-01.png" alt="car">
+                        </div>
+                        <p class="price">
+                           <span>100 $ / day</span> <span>5 seats</span> <span>50 km mileage</span>
+                        </p>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="card">
+                           <img src="img/img-01.png" alt="car">
+                        </div>
+                        <p class="price">
+                           <span>100 $ / day</span> <span>5 seats</span> <span>50 km mileage</span>
+                        </p>
+                     </div>
+                  </div>
                </div>
-               <p class="price">
-                  <span>100 $ / day</span> <span>5 seats</span> <span>50 km mileage</span>
-               </p>
             </div>
          </div>
 
@@ -142,6 +166,8 @@
    </div>
 </footer>
 
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- <script src="js/swiper-bundle.min.js"></script> -->
 	<script src="js/script.js"></script>
 </body>
 </html>
