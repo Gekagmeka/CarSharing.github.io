@@ -316,6 +316,10 @@ input {
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .cards .list .item .ico {
@@ -619,6 +623,12 @@ body.locked {
   .btn:hover {
     background-color: transparent;
     color: #C5AC2D;
+  }
+
+  .cards .list .item:hover {
+    -webkit-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+            transform: scale(1.25);
   }
 
   .two-links span:hover::after {

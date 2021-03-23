@@ -172,12 +172,7 @@
       justify-content: space-between;
       width: 100%;
       max-width: 600px;
-      // @include media ('<=1200px') {
-      //    max-width: 570px;
-      // }
-      // @include media ('<=1024px') {
-      //    max-width: 520px;
-      // }
+
       @include media ('<=768px') {
          margin: 0 auto;
          margin-bottom: 30px;
@@ -198,6 +193,15 @@
          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
          text-align: center;
 
+         cursor: pointer;
+         transition: all 0.2s ease-in;
+
+         &:hover {
+            @include media ('>1023px') {
+               transform: scale(1.25);
+            }
+         }
+
          @include media ('<=1200px') {
             margin: 0 20px;
          }
@@ -206,6 +210,7 @@
             padding: 15px 10px;
             margin: 0 10px;
          }
+
          @include media ('<=480px') {
             margin: 0 auto;
             margin-bottom: 30px;
