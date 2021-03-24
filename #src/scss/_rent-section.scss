@@ -66,6 +66,9 @@
 
             &:last-child{
                margin-right: 0;
+               @include media ('<600px') {
+                  margin-bottom: 0;
+               }
             }
          }
       }
