@@ -13,7 +13,8 @@ let path = { //contains paths to different folders
 	src: { //my working folder
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: source_folder + "/scss/style.scss",
-		js: source_folder + "/js/script.js",
+		// js: source_folder + "/js/script.js",
+		js: source_folder + "/js/*", // to compile svguse.js also
 		img: source_folder + "/img/**/*",
 		fonts: source_folder + "/fonts/*.{ttf, eot, woff, woff2}",
 	},

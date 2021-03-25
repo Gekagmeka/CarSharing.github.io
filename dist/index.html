@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
@@ -269,7 +270,12 @@
                <p>
                   Watch the video presentation of our service and choose a car right&nbsp;now!
                </p>
-               <a class="btn presentation-btn" href="#">
+               <a class="btn presentation-btn" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                  <i class="icon play-ico">
+                     <svg class="play-svg">
+                         <use xmlns="http://www.w3.org/2000/svg" xlink:href="img/symbol-defs.svg#play"></use>
+                     </svg>
+                 </i>
                   See <br>
                   presentation
                </a>
@@ -291,7 +297,10 @@
    </div>
 </footer>
 
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="js/svguse.js"></script>
 	<script src="js/script.js"></script>
 	<!-- <script src="js/swiper-bundle.min.js"></script> -->
 </body>

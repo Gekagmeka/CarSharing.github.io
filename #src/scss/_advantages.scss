@@ -22,20 +22,24 @@
    text-align: center;
    position: relative;
 
-   &::before {
-      content: '';
+   .play-ico {
       position: absolute;
       width: 25px;
       height: 25px;
       top: 12px;
       left: 24px;
-      background-image: url(../img/ico-play.png);
+      display: inline-block;
+
+      .play-svg {
+         fill: $light;
+         transition: all 0.3s ease-in;   
+      }
    }
 
    @include media ('>=1024px') {
       &:hover {
-         &::before {
-            background-image: url(../img/ico-play-mobile.png);
+         .play-svg {
+            fill: $yellow;
          }
       }
    }
