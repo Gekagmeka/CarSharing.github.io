@@ -1,4 +1,59 @@
 .footer {
-   height: 300px;
-   background-color: #ccc;
+   padding: 75px 0 25px;
+   background-color: $brand;
+   @include media ('<=768px') {
+      padding: 50px 0 30px;
+   }
+}
+
+.repeat {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 25px;
+   @include media ('<=768px') {
+      justify-content: center;
+   }
+      .call-box {
+         @include media ('<=768px') {
+            display: none;
+         }
+      }
+
+      .nav {
+         margin-left: -60px;
+      }
+}
+
+.social-list {
+   display: flex;
+   justify-content: center;
+
+   .social-item {
+      margin: 0 15px;     
+   }
+}
+
+.social-links {
+   display: inline-block;
+
+   .icon {
+      width: 31px;
+      height: 31px;
+      display: inline-block;
+
+      .social-svg {
+         fill: $yellow;
+         transition: all 0.2s ease-in;
+      }
+   }
+
+   @include media ('>=1024px') {
+      &:hover {
+         .social-svg {
+            transform: scale(1.25);
+         }
+      }
+   }
+         
 }
