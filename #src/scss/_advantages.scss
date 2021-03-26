@@ -13,6 +13,7 @@
 
       @include media ('<=768px') {
          margin-bottom: 25px;
+         text-align: center;
       }
    }
 }
@@ -53,7 +54,7 @@
       flex-wrap: wrap;
    }
    @include media ('<=600px') {
-      max-width: 400px;
+      max-width: 100%;
       margin: 0 auto;
    }
 
@@ -136,10 +137,13 @@
       margin-left: 10px;
       text-align: right;
       @include media ('<=768px') {
-         max-width: 400px;
+         max-width: 90%;
          text-align: center;
          margin: 0 auto;
          margin-top: 25px;
+      }
+      @include media ('<=600px') {
+         max-width: 100%;
       }
 
       p {
@@ -160,11 +164,11 @@
                max-width: 400px;
                text-align: center;
                margin: 0 auto;
-               margin-bottom: 15px;
-            }
-            @include media ('<=600px') {
                margin-bottom: 35px;
             }
+            // @include media ('<=600px') {
+            //    margin-bottom: 35px;
+            // }
          }
       }
    }
